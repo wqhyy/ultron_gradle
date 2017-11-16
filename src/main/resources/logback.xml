@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!--<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">-->
+    <!--<encoder>-->
+    <!--<pattern>%d{HH:mm:ss.SSS} [%-5level] %logger{15} - %msg%n%rEx</pattern>-->
+    <!--<immediateFlush>false</immediateFlush>-->
+    <!--</encoder>-->
+    <!--</appender>-->
+
+    <!--&lt;!&ndash; Uncomment for logging ALL HTTP request and responses &ndash;&gt;-->
+    <!--&lt;!&ndash; 	<logger name="io.gatling.http.ahc" level="TRACE" /> &ndash;&gt;-->
+    <!--&lt;!&ndash;    <logger name="io.gatling.http.response" level="TRACE" /> &ndash;&gt;-->
+    <!--&lt;!&ndash; Uncomment for logging ONLY FAILED HTTP request and responses &ndash;&gt;-->
+    <!--<logger name="io.gatling.http.ahc" level="INFO" />-->
+    <!--<logger name="io.gatling.http.response" level="INFO" />-->
+
+    <!--<root level="INFO">-->
+    <!--<appender-ref ref="CONSOLE" />-->
+    <!--</root>-->
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>gatling.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%-5level] %logger{15} - %msg%n%rEx</pattern>
+        </encoder>
+    </appender>
+
+    <root level="OFF">
+        <appender-ref ref="FILE" />
+    </root>
+
+</configuration>
